@@ -28,7 +28,7 @@ $(function () {
 });
 
 /*================================================
-    Progresss Bars
+    Progress Bars
 ================================================*/
 $(() => {
   // alternative short form of $(document).ready method
@@ -49,4 +49,13 @@ $(() => {
       offset: "bottom-in-view",
     }
   );
+});
+/*================================================
+    Service - Responsive Tabs
+================================================*/
+$(function () {
+  $("#services-tabs").responsiveTabs({
+    startCollapsed: "accordion",
+    animation: "slide",
+  });
 });
