@@ -59,3 +59,31 @@ $(function () {
     animation: "slide",
   });
 });
+
+/*================================================
+    Portfolio - Isotope Filter
+================================================*/
+$(window).on("load", function () {
+    // init Isotope
+    var $grid = $('#isotope-container').isotope({
+        // options
+    });
+    // filter items on button click
+    $('#isotope-filters').on( 'click', 'button', function() {
+        var filterValue = $(this).attr('data-filter');
+        $grid.isotope({ filter: filterValue });
+        // active button
+        $("#isotope-filters").find('.active').removeClass('active');
+        $(this).addClass('active');
+    });
+});
+/* Magnifier */
+$(function () {
+    $("#portfolio-wrapper").magnificPopup({
+        delegate: 'a', // child items selector, but clicking on it popup will open
+        type: 'image',
+        gallery: {
+            enabled: true
+        }
+    });
+});
